@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Feedback App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/feedback.js"></script>
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col pane text-center">
+                    <h1>Feedbacks</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <ul class="col nav nav-pills flex-column" id="feedbacks-list">
+                                <li>Loading</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pane text-center">
+                    <h1>Feedback Form</h1>
+                    <div class="container-fluid">
+                        <form onsubmit="return false;">
+                            <div class="form-group">
+                                <label class="float-left" for="name">Name <span style="color: red">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="float-left" for="feedback">Feedback <span style="color: red">*</span></label>
+                                <textarea class="form-control rounded-0" id="feedback" rows="10"></textarea>
+                            </div>
+                            <button type="button" onclick="submitFeedback()" class="btn btn-lg btn-primary">Submit Feedback</button>
+                        </form>
+                        <div class="toast float-right" id="success-toast">
+                            <div class="toast-body">
+                                Post submitted successfully!
+                            </div>
+                        </div>
+                        <div class="toast float-right" id="error-toast">
+                            <div class="toast-body">
+                                Please fill all the fields!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

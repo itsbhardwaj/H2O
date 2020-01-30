@@ -1,0 +1,37 @@
+.pane {
+    border: 1px solid #555;
+    height: 100vh;
+    overflow: auto;
+}
+
+li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+li .feedback-name {
+    color: #888;    
+}
+
+li .feedback-text {
+    word-break: break-word;
+    text-align: left;
+}
+
+li .feedback-datetime {
+    color: #888;
+    font-size: 12px;
+}
+
+#success-toast {
+    background-color: darkgreen;
+    color: white;
+}
+
+#error-toast {
+    background-color: crimson;
+    color: white;
+}
